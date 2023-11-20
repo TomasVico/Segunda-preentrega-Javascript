@@ -42,5 +42,4 @@ function Crear(){
     console.table(listaAutos)
 }
 
-
-
+buscarAuto()
