@@ -1,0 +1,45 @@
+.boton{
+    color: aqua;
+    background-color: brown;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+    background-color: black;
+    color:white ;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px
+}
+label{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+#css{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+
+}
+div{
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+}
+h1{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #ccc;
+}
+body{
+    background-color: gray;
+}
+#buscando{
+    height: 25px;
+}
