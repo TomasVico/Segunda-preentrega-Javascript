@@ -81,7 +81,7 @@ botonagregar.addEventListener("click",function agregar(){
     `
     formulario.addEventListener("submit",function(e){
         e.preventDefault();
-        const marcainput= document.getElementById("marca-input").value.trim()
+        const marcainput= document.getElementById("marca-input").value.trim().toLowerCase()
         const modeloinput= parseFloat(document.getElementById("modelo-input").value)
         const colorinput= document.getElementById("color-input").value.trim()
         
