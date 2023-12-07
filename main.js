@@ -11,8 +11,8 @@ const auto3= new Auto ("Ferrari","Rojo","2015")
 const auto4= new Auto ("Mustang","Violeta","2020")
 const auto5= new Auto ("Mercedes","Gris","2003")
 
+const lista = JSON.parse(localStorage.getItem("vehiculos")) || []
 
-const lista=[auto1,auto2,auto3,auto4,auto5]
 localStorage.setItem("vehiculos", JSON.stringify(lista));
 let listaAutos = JSON.parse(localStorage.getItem("vehiculos")) || [];
 
@@ -98,7 +98,7 @@ botonagregar.addEventListener("click",function agregar(){
         lista.push(vehiculo)
         localStorage.setItem("vehiculos",JSON.stringify(lista))
         const container= document.createElement("div")
-        
+        Swal.fire("Se agrego tu vehículo a la lista")
     
 
     
