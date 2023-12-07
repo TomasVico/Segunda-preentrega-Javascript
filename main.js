@@ -13,7 +13,9 @@ const auto5= new Auto ("Mercedes","Gris","2003")
 
 
 const lista=[auto1,auto2,auto3,auto4,auto5]
-let listaAutos=JSON.stringify(localStorage.getItem("vehiculos",lista))
+localStorage.setItem("vehiculos", JSON.stringify(lista));
+let listaAutos = JSON.parse(localStorage.getItem("vehiculos")) || [];
+
 
 
 
@@ -27,11 +29,11 @@ botoncito.addEventListener("click",function filtrar(){
     }else{
     lista
     }
-
+    
     const body= document.getElementById("body")
     let input=document.getElementById("buscando").value 
     let palabraClave= input.trim()
-    let resultado= listaAutos.filter((x)=>x.marca.includes(palabraClave))
+    let resultado= listaAutos.filter((x)=>x.marca.toLowerCase().includes(palabraClave))
     if (input=== ""){
         alert("Escribe la marca que deseas buscar")
         
