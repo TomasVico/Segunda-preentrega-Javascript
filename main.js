@@ -16,8 +16,8 @@ let autosIniciales = [
 let listaAutos = obtenerListaAutos();
 
 function obtenerListaAutos() {
-    const storedAutos = localStorage.getItem("vehiculos");
-    return storedAutos ? JSON.parse(storedAutos) : autosIniciales;
+    const stockAutos = localStorage.getItem("vehiculos");
+    return stockAutos ? JSON.parse(stockAutos) : autosIniciales;
 }
 
 let botoncito = document.getElementById("buscar");
