@@ -26,7 +26,7 @@ botoncito.addEventListener("click", function filtrar() {
 
     const body = document.getElementById("body");
     let input = document.getElementById("buscando").value;
-    let palabraClave = input.trim();
+    let palabraClave = input.trim().toLowerCase();
     let resultado = listaAutos.filter((x) => x.marca.toLowerCase().includes(palabraClave));
     
     if (input === "") {
@@ -114,6 +114,7 @@ mostrar.addEventListener("click", function () {
     autosIniciales.forEach((x) => {
         const card = document.createElement("ul");
         const marca = document.createElement("li");
+        
         marca.textContent = "Marca: " + x.marca;
         card.appendChild(marca);
 
