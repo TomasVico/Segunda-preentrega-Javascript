@@ -72,7 +72,8 @@ botonagregar.addEventListener("click", function agregar() {
         <label for="color-input"> Ingresá el color: </label>
         <input id="color-input" type="text" step="0.01" required>
 
-        <button type="submit" id="css"> Agregar </button>
+        <button type="submit" id="css"> Agregar </button><br>
+        
     `;
 
     formulario.addEventListener("submit", function (e) {
@@ -97,12 +98,18 @@ botonagregar.addEventListener("click", function agregar() {
     });
 
     body.appendChild(formulario);
-
+    const botonvolver=document.createElement("button")
+    botonvolver.innerHTML=`Volver al inicio`
+    botonvolver.addEventListener("click",()=>{
+        window.location.href = document.referrer
+    })
+    body.appendChild(botonvolver)
     
 });
 
 let mostrar = document.getElementById("mostrar");
 mostrar.addEventListener("click", function () {
+    
     const container = document.createElement("div");
     autosIniciales.forEach((x) => {
         const card = document.createElement("ul");
@@ -123,4 +130,16 @@ mostrar.addEventListener("click", function () {
 
     const body = document.getElementById("body");
     body.appendChild(container);
+    const botonvolver=document.createElement("button")
+    botonvolver.innerHTML=`Volver al inicio`
+    botonvolver.addEventListener("click",()=>{
+        window.location.href = document.referrer
+    })
+    body.appendChild(botonvolver)
+    
+
+    
 });
+
+
+
