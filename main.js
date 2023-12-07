@@ -35,8 +35,8 @@ botoncito.addEventListener("click",function filtrar(){
     let palabraClave= input.trim()
     let resultado= listaAutos.filter((x)=>x.marca.toLowerCase().includes(palabraClave))
     if (input=== ""){
-        alert("Escribe la marca que deseas buscar")
-        
+        Swal.fire("Escribe algo para buscar")
+
     }else{ 
 
     if(resultado.length > 0){
@@ -61,7 +61,7 @@ botoncito.addEventListener("click",function filtrar(){
 
     body.appendChild(container)
     }else{
-        alert("no hay coincidencias")
+        Swal.fire("No hay coincidencias para tu búsqueda")
     }}
 })
 
@@ -69,6 +69,8 @@ botoncito.addEventListener("click",function filtrar(){
 
 let botonagregar= document.getElementById("boton")
 botonagregar.addEventListener("click",function agregar(){
+    const body = document.querySelector("body");
+    body.innerHTML = ''
     const formulario= document.createElement("form")
     formulario.innerHTML=`
     <label for="marca-input">Ingresá la marca: </label>
@@ -89,7 +91,7 @@ botonagregar.addEventListener("click",function agregar(){
         
 
         if( marcainput === "" || colorinput ==="" || isNaN(modeloinput)){
-            alert("Ingresa datos validos")
+            Swal.fire("Ingresa datos validos")
             return
         }
         const vehiculo= new Auto(marcainput,modeloinput,colorinput)
@@ -102,7 +104,7 @@ botonagregar.addEventListener("click",function agregar(){
     
     
     })
-    const body=document.querySelector("body")
+    
     body.appendChild(formulario)
 
     
